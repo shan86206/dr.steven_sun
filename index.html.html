@@ -78,6 +78,15 @@
 
         .schedule-wrap { overflow-x: auto; margin-bottom: 35px; border-radius: 12px; border: 1px solid #F1F4F6; }
         .schedule-table { width: 100%; border-collapse: collapse; font-size: 0.85rem; background: #FFF; min-width: 450px; }
+        
+        /* (A) 功能：門診表手機版縮放優化 */
+        @media (max-width: 450px) {
+            .schedule-table { min-width: auto; font-size: 0.75rem; }
+            .time-label { width: 70px; padding-left: 8px; }
+            .schedule-table td, .schedule-table th { padding: 10px 4px; }
+            .closed { font-size: 0.7rem; }
+        }
+
         .schedule-table th { background: #F8FAFB; color: var(--accent-color); font-weight: 600; padding: 12px 8px; border-bottom: 1px solid #EEE; }
         .schedule-table td { padding: 12px 8px; border-bottom: 1px solid #F1F4F6; text-align: center; }
         .active-time { color: var(--accent-color); font-size: 1.2rem; }
@@ -94,6 +103,10 @@
         
         .clinic-footer { font-size: 0.85rem; color: var(--text-sub); text-align: center; }
         .clinic-footer i { color: var(--sub-color); margin-right: 5px; }
+        
+        /* 地圖連結樣式 */
+        .map-link { color: inherit; text-decoration: none; border-bottom: 1px solid transparent; transition: 0.3s; }
+        .map-link:hover { border-bottom: 1px solid var(--sub-color); color: var(--accent-color); }
     </style>
 </head>
 <body>
@@ -178,7 +191,11 @@
             
             <div class="clinic-footer">
                 <p><strong>明利牙醫診所</strong></p>
-                <p><i class="fa-solid fa-location-dot"></i> 台南市鹽水區朝琴路4、6號</p>
+                <p><i class="fa-solid fa-location-dot"></i> 
+                    <a href="https://www.google.com/maps/search/?api=1&query=台南市鹽水區朝琴路4、6號" target="_blank" class="map-link">
+                        台南市鹽水區朝琴路4、6號
+                    </a>
+                </p>
             </div>
         </div>
     </div>
